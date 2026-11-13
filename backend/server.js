@@ -14,7 +14,7 @@ const { CONFIG, CATS, ALL, SIG, OFFERS, REV, FAQ } = restaurantData;
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const GROQ_MODEL = process.env.GROQ_MODEL || 'llama-3.3-70b-versatile';
+const GROQ_MODEL = process.env.GROQ_MODEL || 'openai/gpt-oss-120b';
 
 // CORS configuration
 const corsOrigin = process.env.CORS_ORIGIN || '*';
