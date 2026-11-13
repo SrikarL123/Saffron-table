@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Saffron Table (Demo) | Family Indian Restaurant in Hyderabad</title>
+<meta name="description" content="Demo website for The Saffron Table, a family Indian restaurant concept in Hyderabad: biryani, North Indian, South Indian and Chinese menu, offers and table reservation enquiries.">
+<meta property="og:title" content="The Saffron Table (Demo) | Indian Restaurant in Hyderabad">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Demo website for a fictional family Indian restaurant concept in Hyderabad: menu, offers and reservation enquiries.">
+<meta name="theme-color" content="#FBF6EC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,420;0,9..144,560;0,9..144,620;1,9..144,420;1,9..144,500&family=Hanken+Grotesk:wght@400;500;560;650&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"The Saffron Table (demo)","description":"Demo website for a fictional restaurant concept. Not a verified business.","servesCuisine":["North Indian","South Indian","Chinese","Biryani"],"areaServed":"Hyderabad, India"}</script>
+<style>
+:root{--paper:#FBF6EC;--paper2:#F2E8D5;--ink:#2B1A12;--mut:#5E4A3D;--line:#E0D2B8;--saf:#C77A12;--safd:#8F5206;--chi:#8E2B1B;--chid:#6F1F12;--car:#34402C;--sh:0 1px 2px rgba(43,26,18,.06),0 14px 32px -14px rgba(43,26,18,.22);--e:cubic-bezier(.16,1,.3,1);caret-color:var(--chi);scrollbar-color:var(--saf) var(--paper2);color-scheme:light}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{font:400 1rem/1.65 "Hanken Grotesk",system-ui,sans-serif;background:var(--paper);color:var(--ink);padding-bottom:calc(76px + env(safe-area-inset-bottom,0px));overflow-x:hidden}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:560;line-height:1.08;letter-spacing:-.02em;text-wrap:balance}
+h1{font-size:clamp(2.7rem,7.2vw,5.4rem)}h2{font-size:clamp(2rem,4.6vw,3.2rem)}h3{font-size:1.25rem;letter-spacing:-.01em}
+p{max-width:62ch}a{color:inherit;text-decoration:none}
+::selection{background:var(--saf);color:#fff}
+:focus-visible{outline:3px solid var(--chi);outline-offset:3px;border-radius:6px}
+.w{width:min(1180px,100% - 40px);margin-inline:auto}
+section{padding:clamp(56px,9vw,112px) 0}
+.ic{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;font:650 .95rem "Hanken Grotesk",sans-serif;border:1.5px solid var(--chi);color:var(--chi);background:none;cursor:pointer;transition:background .25s var(--e),color .25s var(--e),transform .25s var(--e)}
+.btn:hover{background:var(--chi);color:var(--paper)}.btn.p{background:var(--chi);color:var(--paper)}.btn.p:hover{background:var(--chid);border-color:var(--chid)}.btn:active{transform:scale(.97)}
+.btn.t{border-color:transparent;padding:0 10px}.btn.t:hover{background:none;color:var(--chid);text-decoration:underline}.nc{opacity:.55}
+.sh{margin-bottom:40px;max-width:640px}.sh p{margin-top:14px;color:var(--mut)}
+/* header */
+header.top{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.hb{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{font:600 1.4rem Fraunces,serif;letter-spacing:-.01em}.logo i{color:var(--saf);font-style:normal}
+nav.d{display:none;gap:28px;font-weight:500;font-size:.95rem}
+nav.d a{padding:6px 0;background:linear-gradient(var(--saf),var(--saf)) 0 100%/0 2px no-repeat;transition:background-size .3s var(--e)}nav.d a:hover{background-size:100% 2px}
+.hr{display:flex;align-items:center;gap:10px}.hr .btn{min-height:44px;padding:0 18px}.hd{display:none}
+.ib{width:44px;height:44px;border:0;background:none;display:grid;place-items:center;cursor:pointer;color:var(--ink)}
+.ot{display:none;font-size:.82rem;color:var(--mut);text-decoration:underline;text-underline-offset:3px}
+#mn{display:none;border-top:1px solid var(--line);padding:6px 20px 20px;background:var(--paper)}#mn.o{display:block}
+#mn a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font:560 1.25rem Fraunces,serif}
+@media(min-width:960px){nav.d{display:flex}.hd{display:inline-flex}.ib{display:none}#mn{display:none!important}body{padding-bottom:0}.sbar{display:none!important}}
+@media(min-width:1560px){.ot{display:block}}
+/* hero */
+.hero{padding:clamp(32px,6vw,72px) 0 clamp(56px,8vw,96px)}
+.hg{display:grid;gap:40px;align-items:center}@media(min-width:900px){.hg{grid-template-columns:1.15fr .85fr;gap:64px}}
+.hero .lead{font-size:1.15rem;color:var(--mut);margin:24px 0 32px;max-width:44ch}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.loc{margin-top:36px;font-size:.92rem;color:var(--mut);display:flex;gap:8px;align-items:center}
+.arch{aspect-ratio:4/5;border-radius:999px 999px 20px 20px;max-width:440px;margin-inline:auto;width:100%;box-shadow:var(--sh);animation:reveal 1.1s var(--e) both}
+.hero h1 span{display:block;animation:rise .9s var(--e) both}.hero h1 span:nth-child(2){animation-delay:.08s}.hero h1 span:nth-child(3){animation-delay:.16s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}}@keyframes reveal{from{opacity:0;clip-path:inset(14% 10% 0 10% round 999px 999px 20px 20px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.ts{border-block:1px solid var(--line);background:var(--paper2);padding:18px 0}
+.ts ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:center;font-size:.95rem}.ts li{display:flex;gap:8px;align-items:center}.ts .ic{width:16px;height:16px;fill:var(--saf);stroke:none}
+.nt{font-size:.78rem;color:var(--mut);text-align:center;margin:10px auto 0}
+/* photos */
+.ph{position:relative;overflow:hidden;background:var(--paper2)}.ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s var(--e)}
+figure:hover .ph img,.gb:hover .ph img{transform:scale(1.04)}
+.np{background:repeating-linear-gradient(45deg,#F2E8D5 0 10px,#EDE0C6 10px 20px)}
+.np::after{content:attr(data-m);position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:8px;font:500 1.7rem Fraunces,serif;color:#A88A5E}.np.lbl::after{font:600 .8rem "Hanken Grotesk",sans-serif;color:var(--mut)}
+/* about */
+.ab{display:grid;gap:40px;align-items:center}@media(min-width:900px){.ab{grid-template-columns:.9fr 1.1fr;gap:80px}}
+.ab .ph{aspect-ratio:5/4;border-radius:20px;box-shadow:var(--sh)}.ab p{margin-top:18px;color:var(--mut)}.ab .btn{margin-top:28px}
+/* signature */
+.sg{display:grid;gap:32px 24px}@media(min-width:900px){.sg{grid-template-columns:1.35fr 1fr 1fr}.sg .f{grid-row:span 2}}
+.sg figure{display:flex;flex-direction:column;gap:14px}.sg .ph{aspect-ratio:4/3;border-radius:18px}.sg .f .ph{flex:1;aspect-ratio:auto;min-height:340px}
+.cap{display:flex;justify-content:space-between;gap:12px;align-items:baseline}.cap h3{display:flex;gap:8px;align-items:center}
+.pr{font:600 1.1rem Fraunces,serif;color:var(--safd);font-variant-numeric:tabular-nums;white-space:nowrap}.ds{font-size:.92rem;color:var(--mut);margin-top:4px}
+.tag{display:inline-block;margin-top:8px;font-size:.72rem;font-weight:650;letter-spacing:.05em;text-transform:uppercase;color:var(--chid);background:#F6DFC0;padding:3px 10px;border-radius:99px}
+.vg{flex:none;width:15px;height:15px;border:1.5px solid #2F7A32;border-radius:3px;display:inline-grid;place-items:center}.vg:after{content:"";width:7px;height:7px;border-radius:50%;background:#2F7A32}.vg.nv{border-color:#A3321F}.vg.nv:after{background:#A3321F}
+/* menu */
+#menu{background:var(--paper2)}
+.tools{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;margin-bottom:16px}
+.sr{position:relative;flex:1;min-width:220px;max-width:360px}.sr .ic{position:absolute;left:14px;top:14px;color:var(--mut)}
+input,select,textarea{font:inherit;color:var(--ink);width:100%;min-height:48px;padding:11px 16px;border:1.5px solid var(--line);border-radius:12px;background:#FFFDF8}.sr input{padding-left:44px}
+input:focus,select:focus,textarea:focus{border-color:var(--chi);outline:none;box-shadow:0 0 0 3px rgba(142,43,27,.18)}
+.chk{display:flex;align-items:center;gap:10px;font-size:.95rem;cursor:pointer}.chk input{width:20px;min-height:0;height:20px;accent-color:var(--chi)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 0 14px;margin-bottom:8px;scrollbar-width:thin}
+.tabs button{flex:none;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--line);background:#FFFDF8;font:560 .92rem "Hanken Grotesk",sans-serif;color:var(--ink);cursor:pointer;transition:background .2s,color .2s}
+.tabs button:hover{border-color:var(--ink)}.tabs button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.ml{display:grid;column-gap:56px}@media(min-width:900px){.ml{grid-template-columns:1fr 1fr}}
+.mi{display:grid;grid-template-columns:92px 1fr auto;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
+.th{width:92px;height:92px;border-radius:12px}.th.np::after{font-size:1.5rem}
+.mi h3{font:650 1.05rem "Hanken Grotesk",sans-serif;letter-spacing:0;display:flex;gap:8px;align-items:center}
+.em{padding:48px 0;color:var(--mut);grid-column:1/-1}.fine{font-size:.8rem;color:var(--mut);margin-top:24px}
+/* occasions */
+.xp{display:grid;border-top:1.5px solid var(--ink)}@media(min-width:800px){.xp{grid-template-columns:repeat(3,1fr)}}
+.xp div{padding:28px 0;border-bottom:1px solid var(--line)}.xp p{margin-top:10px;color:var(--mut)}
+@media(min-width:800px){.xp div{padding:32px 28px 8px 0;border-bottom:0}.xp div+div{padding-left:28px;border-left:1px solid var(--line)}}
+/* gallery */
+#gallery{background:var(--paper2)}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}@media(min-width:800px){.gal{grid-template-columns:repeat(4,1fr);gap:16px}.gal>div:nth-child(1){grid-column:span 2;grid-row:span 2}.gal>div:nth-child(6){grid-column:span 2;aspect-ratio:2/1}}
+.gal>div{aspect-ratio:1;border-radius:16px;overflow:hidden}
+.gb{border:0;padding:0;background:none;display:block;width:100%;height:100%;cursor:zoom-in}.gb .ph{width:100%;height:100%}
+/* offers & reviews */
+.of{display:grid;gap:8px 24px;padding:26px 0;border-bottom:1px solid var(--line);align-items:center}.of:first-child{border-top:1.5px solid var(--ink)}
+@media(min-width:800px){.of{grid-template-columns:1fr 1.5fr auto auto}}.of h3{font-size:1.5rem}.of .pr{font-size:1.5rem}
+.dm{display:inline-block;font-size:.7rem;font-weight:650;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);border:1px solid var(--line);border-radius:99px;padding:2px 9px;margin-bottom:8px}
+#reviews{background:var(--paper2)}.rvs{display:grid;gap:40px}@media(min-width:900px){.rvs{grid-template-columns:1.4fr 1fr 1fr;gap:56px}}
+blockquote{margin:0}blockquote p{color:var(--mut);margin:12px 0}.big p{font:420 clamp(1.4rem,2.6vw,2rem)/1.35 Fraunces,serif;color:var(--ink);max-width:none}.by{font-size:.85rem;color:var(--mut)}
+.stars{display:flex;gap:3px;color:var(--saf)}.stars .ic{width:18px;height:18px;fill:currentColor;stroke:none}
+/* forms */
+.two{display:grid;gap:48px}@media(min-width:900px){.two{grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}}
+.two>div>p{margin-top:16px;color:var(--mut)}
+form.fc{background:#FFFDF8;border:1px solid var(--line);border-radius:20px;padding:clamp(22px,4vw,36px);box-shadow:var(--sh)}
+.fg{display:grid;gap:16px}@media(min-width:640px){.fg.c2{grid-template-columns:1fr 1fr}}
+label{display:block;font-size:.85rem;font-weight:650;margin-bottom:6px}.er{color:#A3321F;font-size:.8rem;min-height:1.1em;margin-top:4px}
+.ok{background:#EEF1E3;border:1px solid #B9C29A;padding:14px 16px;border-radius:12px;font-size:.92rem;margin-top:16px}
+#contact{background:var(--paper2)}.ct{display:grid;gap:6px;margin-top:24px}.ct a{display:flex;gap:10px;align-items:center;text-decoration:underline;text-underline-offset:3px}
+/* outlets, faq */
+.ol{display:grid;gap:36px}@media(min-width:900px){.ol{grid-template-columns:1fr 1fr;gap:44px}}
+.out{background:#FFFDF8;border:1.5px solid var(--line);border-radius:20px;padding:clamp(22px,3.5vw,36px);box-shadow:var(--sh);display:flex;flex-direction:column;transition:transform .25s var(--e),box-shadow .25s var(--e)}
+.out:hover{box-shadow:0 8px 30px -10px rgba(43,26,18,.25)}
+.out-meta-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.out header h3{font-size:1.45rem;letter-spacing:-.01em}
+.bdg{font-size:.78rem;font-weight:650;padding:4px 12px;border-radius:99px;background:#EADFCC;display:inline-flex;align-items:center;gap:6px}
+.bdg.on{background:#DDEACB;color:#2C5A22}
+.out .ad{color:var(--mut);margin:8px 0 14px;font-size:.95rem;line-height:1.5}
+.out .st{font-weight:650;font-size:.98rem;color:var(--chi);margin-bottom:16px}
+.out dl{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;margin:0 0 16px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px}
+.out dt{font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+.out dd{margin:0;font-weight:600;font-size:.92rem;color:var(--ink)}
+.map{position:relative;width:100%;aspect-ratio:16/9;min-height:220px;border-radius:14px;overflow:hidden;background:var(--paper2);border:1px solid var(--line);margin:0 0 12px;display:grid;place-items:center}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.out-notice{font-size:.8rem;color:var(--mut);background:var(--paper);border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin-bottom:18px;line-height:1.45}
+.out-actions{margin-top:auto;display:flex;flex-wrap:wrap;gap:10px}
+.out-actions .btn{flex:1 1 calc(50% - 6px);min-height:46px;padding:0 14px;font-size:.9rem}
+@media(max-width:540px){.out-actions .btn{flex:1 1 100%}.out dl{grid-template-columns:1fr}}
+.fq{max-width:780px}details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 0;font:560 1.15rem Fraunces,serif}summary::-webkit-details-marker{display:none}
+summary .ic{transition:transform .3s var(--e);color:var(--chi)}details[open] summary .ic{transform:rotate(45deg)}details p{padding:0 0 22px;color:var(--mut)}
+/* cta, footer, bars */
+.cta{background:var(--car);color:var(--paper);padding:clamp(64px,10vw,120px) 0;text-align:center}.cta h2{color:var(--paper);font-size:clamp(2.4rem,6vw,4.4rem)}.cta p{margin:18px auto 32px;color:#DDD7C2}.cta .row{justify-content:center}
+.cta .btn{border-color:var(--paper);color:var(--paper)}.cta .btn:hover{background:var(--paper);color:var(--car)}.cta .btn.p{background:var(--saf);border-color:var(--saf);color:var(--ink)}.cta .btn.p:hover{background:#E19A3A}
+footer.sf{background:#241810;color:#D8CCB4;padding:56px 0 28px;font-size:.92rem}footer.sf h3{color:var(--paper);font-size:1.1rem;margin-bottom:12px}footer.sf .logo{color:var(--paper)}
+.f4{display:grid;gap:32px}@media(min-width:800px){.f4{grid-template-columns:1.6fr 1fr 1fr 1.2fr}}footer.sf a{display:block;padding:4px 0}footer.sf a:hover{color:#fff}
+footer.sf small{display:block;margin-top:40px;color:#B3A488;border-top:1px solid #3B2B1F;padding-top:20px}
+.sbar{position:fixed;inset:auto 0 0;z-index:45;display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:8px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:var(--paper);border-top:1px solid var(--line)}
+.sbar a{min-height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:650;font-size:.9rem;border:1.5px solid var(--line);background:#FFFDF8}.sbar a.p{background:var(--chi);border-color:var(--chi);color:var(--paper)}
+#lb{position:fixed;inset:0;z-index:60;background:rgba(30,18,12,.92);display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}#lb.o{opacity:1;visibility:visible}
+.lf{width:min(94vw,960px);transform:scale(.97);transition:transform .3s var(--e)}#lb.o .lf{transform:none}.lm{width:100%;aspect-ratio:4/3;max-height:75vh;border-radius:14px;background:#1A120D}.lm img{object-fit:contain}.lf figcaption{color:#EFE6D2;text-align:center;margin-top:12px;font-size:.92rem}
+.lb{position:absolute;width:48px;height:48px;border-radius:50%;border:0;background:var(--paper);color:var(--ink);display:grid;place-items:center;cursor:pointer;z-index:2}.lb.x{top:calc(12px + env(safe-area-inset-top,0px));right:12px}.lb.p{left:10px;top:50%}.lb.n{right:10px;top:50%}
+#ts{position:fixed;left:50%;bottom:calc(88px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:12px 18px;border-radius:12px;font-size:.88rem;z-index:70;max-width:90vw;display:none;text-align:center}
+.demo{background:var(--ink);color:#EFE3CB;font-size:.8rem;text-align:center;padding:8px 16px}
+.logo,.btn,.ot{white-space:nowrap}.hero h1{font-size:clamp(2.6rem,6vw,4.6rem)}.hero h1 em{font-style:italic;font-weight:420;color:var(--chi)}
+.hw{position:relative;max-width:440px;margin-inline:auto}.hw::before{content:"";position:absolute;inset:16px -16px -16px 16px;border:1.5px solid var(--saf);border-radius:999px 999px 20px 20px;pointer-events:none}
+.afig .ph{aspect-ratio:5/4;border-radius:20px;box-shadow:var(--sh)}.afig figcaption{font-size:.82rem;color:var(--mut);margin-top:10px}
+.ab p:first-of-type{font-size:1.2rem;color:var(--ink);line-height:1.55}
+.sg .f h3{font-size:1.75rem}.sg .f .ph{min-height:440px}.sg figure .ph{transition:box-shadow .3s}.sg figure:hover .ph{box-shadow:var(--sh)}
+.np:not(.th):not(.lbl)::before{content:"Photo coming soon";position:absolute;left:0;right:0;bottom:14px;text-align:center;font:600 .7rem "Hanken Grotesk",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);z-index:1}
+.ch{grid-column:1/-1;font-size:1.6rem;margin:40px 0 4px;padding-bottom:10px;border-bottom:1.5px solid var(--ink)}.ch:first-child{margin-top:8px}
+.cnt{font-size:.85rem;color:var(--mut);min-height:1.4em}.mi{transition:background .2s}.mi:hover h3{color:var(--chi)}
+.em{display:grid;gap:16px;justify-items:start}
+.gal>div{border-radius:18px}.gb:focus-visible{outline-offset:-4px}
+.of{transition:background .25s;padding-inline:14px;margin-inline:-14px;border-radius:12px}.of:hover{background:rgba(242,232,213,.6)}
+.ok pre{white-space:pre-wrap;font:inherit;font-size:.85rem;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px;margin-top:10px}
+input[aria-invalid=true],select[aria-invalid=true]{border-color:#A3321F}
+nav.d a[aria-current]{background-size:100% 2px;color:var(--chid)}#mn a[aria-current]{color:var(--chi)}
+.btn:focus-visible,.sbar a:focus-visible{outline-offset:4px}.tabs button:focus-visible{outline-offset:2px}
+@media(max-width:1179px){.hr .tx{display:none}.hr .btn:not(.p){padding:0;width:44px}}
+@media(max-width:480px){.mi{grid-template-columns:76px 1fr auto;gap:12px}.th{width:76px;height:76px}.hw::before{inset:12px -8px -12px 8px}}
+body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+.sbar{gap:10px;padding-top:8px;box-shadow:0 -8px 24px -12px rgba(43,26,18,.25)}.sbar a{flex-direction:column;gap:2px;min-height:56px;font-size:.76rem;transition:transform .2s var(--e)}.sbar a:active{transform:scale(.96)}.sbar .ic{width:20px;height:20px}
+footer.sf h3{font:650 .78rem "Hanken Grotesk",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#B3A488}.ft{font:500 1.6rem/1.25 Fraunces,serif;color:var(--paper);margin-top:14px;max-width:20ch}.fcu{margin-top:12px;color:#B3A488}
+@media(max-width:560px){.hero{padding-top:24px}.hero .row .btn:not(.t){flex:1 1 calc(50% - 6px);padding:0 12px}}
+
+/* Saffron AI Floating Button & Assistant Modal */
+.sc-toggle{position:fixed;right:24px;bottom:24px;z-index:55;display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 22px 0 16px;border-radius:999px;border:1.5px solid var(--saf);background:linear-gradient(135deg,var(--chi) 0%,var(--chid) 100%);color:#FFFDF8;box-shadow:0 8px 24px -4px rgba(142,43,27,.45),0 4px 10px rgba(43,26,18,.15);cursor:pointer;font:650 .92rem "Hanken Grotesk",sans-serif;transition:transform .25s var(--e),box-shadow .25s var(--e)}
+.sc-toggle:hover{transform:translateY(-2px);box-shadow:0 12px 30px -4px rgba(142,43,27,.55)}
+.sc-toggle:active{transform:scale(.97)}
+.sc-toggle .ic{width:22px;height:22px}
+.sc-toggle-badge{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 2px rgba(255,255,255,.35)}
+@media(max-width:959px){.sc-toggle{bottom:calc(76px + env(safe-area-inset-bottom,0px));right:16px;padding:0 16px 0 14px;min-height:46px;font-size:.86rem}}
+
+.sc-modal{position:fixed;right:24px;bottom:84px;width:400px;max-width:calc(100vw - 32px);height:min(600px,calc(100vh - 120px));z-index:65;background:var(--paper);border:1.5px solid var(--line);border-radius:20px;box-shadow:0 20px 48px -10px rgba(43,26,18,.35),0 0 0 1px rgba(224,210,184,.3);display:flex;flex-direction:column;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(16px) scale(.98);transition:opacity .25s var(--e),transform .25s var(--e),visibility .25s}
+.sc-modal.open{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+@media(max-width:600px){.sc-modal{right:0;bottom:0;width:100vw;max-width:100vw;height:100%;max-height:100%;border-radius:0;border:0;z-index:100}}
+
+.sc-head{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:linear-gradient(135deg,var(--chi) 0%,#5b170c 100%);color:#FFFDF8;border-bottom:1.5px solid var(--line);flex-shrink:0}
+.sc-head-info{display:flex;align-items:center;gap:12px}
+.sc-avatar{width:38px;height:38px;border-radius:50%;background:#FFFDF8;color:var(--chi);display:grid;place-items:center;box-shadow:0 2px 6px rgba(0,0,0,.2);flex-shrink:0}
+.sc-title{font-family:Fraunces,Georgia,serif;font-size:1.15rem;font-weight:560;line-height:1.15;color:#FFFDF8;letter-spacing:-.01em}
+.sc-subtitle{font-size:.76rem;color:#F2E8D5;display:flex;align-items:center;gap:6px;margin-top:2px}
+.sc-status-dot{width:7px;height:7px;border-radius:50%;background:#4ade80}
+.sc-close-btn{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.12);color:#FFFDF8;display:grid;place-items:center;cursor:pointer;transition:background .2s}
+.sc-close-btn:hover{background:rgba(255,255,255,.26)}
+
+.sc-messages{flex:1;min-height:0;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;background:var(--paper);scroll-behavior:smooth}
+.sc-msg{display:flex;flex-direction:column;max-width:88%;animation:scFadeIn .22s var(--e)}
+@keyframes scFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.sc-msg.bot{align-self:flex-start}
+.sc-msg.user{align-self:flex-end}
+.sc-bubble{padding:10px 14px;border-radius:15px;font-size:.9rem;line-height:1.52;word-break:break-word}
+.sc-msg.bot .sc-bubble{background:#FFFDF8;color:var(--ink);border:1.5px solid var(--line);border-bottom-left-radius:3px;box-shadow:0 2px 6px rgba(43,26,18,.04)}
+.sc-msg.user .sc-bubble{background:var(--chi);color:#FFFDF8;border-bottom-right-radius:3px}
+.sc-bubble p{margin:0 0 6px}.sc-bubble p:last-child{margin-bottom:0}
+.sc-bubble ul{padding-left:18px;margin:4px 0 6px}
+.sc-bubble li{margin-bottom:3px}
+.sc-bubble strong{font-weight:650;color:inherit}
+.sc-bubble a{color:var(--chid);font-weight:650;text-decoration:underline;text-underline-offset:2px}
+.sc-msg.user .sc-bubble a{color:#FFF}
+.sc-bubble .sc-md-h{font-family:Fraunces,Georgia,serif;font-size:.88rem;font-weight:600;color:var(--chi);margin:8px 0 4px;letter-spacing:-.01em}
+.sc-bubble .sc-md-hr{border:none;border-top:1px solid var(--line);margin:8px 0;opacity:.6}
+.sc-time{font-size:.7rem;color:var(--mut);margin-top:3px;padding:0 4px}
+.sc-msg.user .sc-time{text-align:right}
+
+.sc-prompts{padding:6px 14px 10px;display:flex;gap:7px;overflow-x:auto;scrollbar-width:thin;flex-shrink:0;background:var(--paper);border-top:1px solid rgba(224,210,184,.6)}
+.sc-prompt-chip{flex:none;font-size:.78rem;font-weight:560;color:var(--ink);background:#FFFDF8;border:1px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer;transition:all .2s;white-space:nowrap}
+.sc-prompt-chip:hover{background:var(--paper2);border-color:var(--saf);color:var(--chid)}
+
+.sc-typing{display:inline-flex;align-items:center;gap:4px;padding:8px 12px;background:#FFFDF8;border:1.5px solid var(--line);border-radius:12px;width:fit-content;margin-bottom:4px}
+.sc-typing span{font-size:.75rem;color:var(--mut);margin-right:4px}
+.sc-dot{width:6px;height:6px;border-radius:50%;background:var(--saf);animation:scDot 1.2s infinite ease-in-out}
+.sc-dot:nth-child(2){animation-delay:.2s}.sc-dot:nth-child(3){animation-delay:.4s}
+@keyframes scDot{0%,80%,100%{transform:scale(.6);opacity:.4}40%{transform:scale(1);opacity:1}}
+
+.sc-footer{padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:#FFFDF8;border-top:1.5px solid var(--line);display:flex;align-items:center;gap:8px;flex-shrink:0}
+.sc-input-wrapper{flex:1}
+.sc-input{width:100%;min-height:42px;padding:8px 14px;border-radius:22px;border:1.5px solid var(--line);background:var(--paper);font:400 .9rem "Hanken Grotesk",sans-serif;color:var(--ink)}
+.sc-input:focus{border-color:var(--chi);outline:none;box-shadow:0 0 0 3px rgba(142,43,27,.15)}
+.sc-send-btn{width:42px;height:42px;border-radius:50%;border:0;background:var(--chi);color:#FFFDF8;display:grid;place-items:center;cursor:pointer;flex-shrink:0;transition:background .2s,transform .2s}
+.sc-send-btn:hover:not(:disabled){background:var(--chid);transform:scale(1.05)}
+.sc-send-btn:disabled{opacity:.4;cursor:not-allowed}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+<symbol id="i-wa" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+<symbol id="i-l" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+<symbol id="i-r" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.1 8.6 22 9.3 16.8 14.1 18.2 21 12 17.6 5.8 21 7.2 14.1 2 9.3 8.9 8.6"/></symbol>
+<symbol id="i-bot" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2v1h2a4 4 0 0 1 4 4v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h2V4a2 2 0 0 1 2-2z"/><circle cx="9" cy="12" r="1.5"/><circle cx="15" cy="12" r="1.5"/><path d="M9 16h6"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4 20-7z"/><path d="M22 2 11 13"/></symbol>
+<symbol id="i-sparkle" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3z"/></symbol>
+</defs></svg>
+
+<div class="demo">Demo website. Menu, offers, reviews and contact details are illustrative.</div>
+<header class="top"><div class="w hb">
+<a href="#top" class="logo">The Saffron <i>Table</i></a>
+<nav class="d" aria-label="Main"><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#offers">Offers</a><a href="#party">Parties</a><a href="#outlets">Outlets</a><a href="#contact">Contact</a></nav>
+<div class="hr"><a class="ot" href="#outlets">Check outlet timings</a>
+<a class="btn hd" data-call href="#" aria-label="Call"><i data-ic="phone"></i><span class="tx">Call</span></a>
+<a class="btn hd" data-wa href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><i data-ic="wa"></i><span class="tx">WhatsApp</span></a>
+<a class="btn p hd" href="#contact">Reserve a Table</a>
+<button class="ib" id="bg" aria-label="Open menu" aria-expanded="false"><i data-ic="menu"></i></button></div></div>
+<div id="mn"><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#offers">Offers</a><a href="#party">Parties</a><a href="#outlets">Outlets</a><a href="#contact">Contact</a></div></header>
+
+<main id="top">
+<section class="hero"><div class="w hg"><div>
+<h1><span>Good Food.</span><span><em>Beautiful Moments.</em></span><span>Always.</span></h1>
+<p class="lead">Discover thoughtfully prepared Indian favourites, authentic flavours and memorable dining at The Saffron Table.</p>
+<div class="row"><a class="btn p" href="#menu">Explore Menu</a><a class="btn" href="#contact"><i data-ic="cal"></i>Reserve a Table</a><a class="btn t" data-wa href="#" target="_blank" rel="noopener"><i data-ic="wa"></i>WhatsApp us</a></div>
+<p class="loc"><i data-ic="pin"></i>Hyderabad · North Indian · South Indian · Chinese</p></div>
+<div class="hw"><div id="hi"></div></div></div></section>
+
+<div class="ts"><div class="w"><ul><li><i data-ic="star"></i>4.6 sample Google rating</li><li>1,200+ sample reviews</li><li>Serving Hyderabad since 2014</li><li>North Indian · South Indian · Chinese · Continental</li></ul>
+<p class="nt">Ratings and counts are illustrative demo data, not real Google reviews.</p></div></div>
+
+<section id="about"><div class="w ab"><figure class="afig"><div id="ai"></div><figcaption>Condiments and chutneys, served at the table.</figcaption></figure>
+<div><h2>More Than Just a Meal</h2>
+<p>The Saffron Table began in 2014 as a family kitchen with one idea: slow-cooked Indian food, served warmly. Hand-ground masalas, dum biryani sealed and cooked to order, and a dining room built for long, easy conversations.</p>
+<p>Whether it is a weeknight dinner or a birthday for twenty, we keep the same promise: fresh ingredients, honest portions and a table that is always ready.</p>
+<a class="btn" href="#gallery">Discover Our Story</a></div></div></section>
+
+<section style="padding-top:0"><div class="w"><div class="sh"><h2>Signature Dishes</h2><p>The plates our guests come back for.</p></div><div class="sg" id="sig"></div></div></section>
+
+<section id="menu"><div class="w"><div class="sh"><h2>Our Menu</h2></div>
+<div class="tools"><div class="sr"><i data-ic="search"></i><input id="q" type="search" placeholder="Search dishes" aria-label="Search dishes"></div><label class="chk"><input type="checkbox" id="vo"> Veg only</label></div>
+<div class="tabs" id="tabs" aria-label="Menu categories"></div><p class="cnt" id="cnt" aria-live="polite"></p><div class="ml" id="mg" aria-live="polite"></div>
+<p class="fine">Prices in INR, inclusive of taxes. Demo menu. Dishes without a photo yet show a placeholder.</p></div></section>
+
+<section><div class="w"><div class="sh"><h2>Every Occasion Has a Place</h2></div>
+<div class="xp"><div><h3>Family dining</h3><p>Spacious family seating, high chairs and a menu with something for every age.</p></div><div><h3>Friends gatherings</h3><p>Large tables, shareable platters and relaxed evenings.</p></div><div><h3>Celebrations</h3><p>Birthdays, anniversaries and kitty parties in our party space.</p></div></div></div></section>
+
+<section id="gallery"><div class="w"><div class="sh"><h2>From Our Kitchen and Dining Room</h2><p>Interior, seating and party-space photographs will be added soon.</p></div><div class="gal" id="gl"></div></div></section>
+
+<section id="offers"><div class="w"><div class="sh"><h2>Meal Deals</h2><p>Illustrative demo offers.</p></div><div id="of"></div></div></section>
+
+<section id="reviews"><div class="w"><div class="sh"><h2>What Guests Say</h2><p>Illustrative demo testimonials, not verified Google reviews.</p></div><div class="rvs" id="rv"></div></div></section>
+
+<section id="party"><div class="w two"><div><h2>Celebrate With Us</h2><p>Birthdays, anniversaries, corporate events, kitty parties, family gatherings and bulk food orders. Send an enquiry and the restaurant will confirm details.</p></div>
+<form class="fc" id="pf" novalidate><div class="fg">
+<div><label for="pe">Event type</label><select id="pe" name="e"><option>Birthday party</option><option>Anniversary</option><option>Corporate event</option><option>Kitty party</option><option>Family gathering</option><option>Bulk food order</option></select></div>
+<div class="fg c2"><div><label for="pn">Name</label><input id="pn" name="n" autocomplete="name"><div class="er"></div></div><div><label for="pp">Phone</label><input id="pp" name="p" type="tel" inputmode="tel" autocomplete="tel" placeholder="10-digit mobile number" enterkeyhint="next"><div class="er"></div></div>
+<div><label for="pd">Event date</label><input id="pd" name="d" type="date"><div class="er"></div></div><div><label for="pg">Guests</label><input id="pg" name="g" type="number" min="5" max="500" inputmode="numeric" placeholder="e.g. 20"><div class="er"></div></div></div>
+<div><label for="pt">Preferred time</label><input id="pt" name="t" type="time" value="19:00"></div>
+<div><label for="ps">Special requirements</label><textarea id="ps" name="s" rows="3"></textarea></div>
+<button class="btn p" type="submit"><i data-ic="wa"></i>Send Enquiry on WhatsApp</button></div><div class="ok" hidden></div></form></div></section>
+
+<section id="contact"><div class="w two"><div><h2>Reserve a Table</h2><p>Send a request and we will confirm availability on WhatsApp. Submitting this form does not confirm a booking.</p>
+<div class="ct"><a data-call href="#"></a><a data-wa href="#" target="_blank" rel="noopener"><i data-ic="wa"></i>Message on WhatsApp</a></div>
+<p class="fine">Hours vary by outlet, see <a href="#outlets" style="text-decoration:underline">Our Outlets</a>. Demo contact numbers are not configured yet.</p></div>
+<form class="fc" id="rf" novalidate><div class="fg"><div class="fg c2">
+<div><label for="rn">Name</label><input id="rn" name="n" autocomplete="name"><div class="er"></div></div><div><label for="rp">Phone</label><input id="rp" name="p" type="tel" inputmode="tel" autocomplete="tel" placeholder="10-digit mobile number" enterkeyhint="next"><div class="er"></div></div>
+<div><label for="rd">Date</label><input id="rd" name="d" type="date"><div class="er"></div></div><div><label for="rt">Time</label><input id="rt" name="t" type="time" min="11:00" max="22:30" value="20:00"><div class="er"></div></div>
+<div><label for="rg">Guests</label><select id="rg" name="g"></select></div><div><label for="rs">Seating</label><select id="rs" name="s"><option>No preference</option><option>Family section</option><option>Window</option><option>Outdoor</option></select></div></div>
+<div><label for="rq">Special requests</label><textarea id="rq" name="q" rows="2"></textarea></div>
+<button class="btn p" type="submit"><i data-ic="cal"></i>Request Reservation</button></div><div class="ok" hidden></div></form></div></section>
+
+<section id="outlets"><div class="w"><div class="sh"><h2>Our Outlets</h2><p>Fictional demo outlets. All times are Indian Standard Time (IST).</p></div><div class="ol" id="ol"></div></div></section>
+
+<section style="padding-top:0"><div class="w"><div class="sh"><h2>Good to Know</h2></div><div class="fq" id="fq"></div></div></section>
+
+<div class="cta"><div class="w"><h2>Your Table Is Waiting.</h2><p>Reserve in a minute or message us on WhatsApp.</p><div class="row"><a class="btn p" href="#contact">Reserve a Table</a><a class="btn" data-wa href="#" target="_blank" rel="noopener"><i data-ic="wa"></i>WhatsApp</a></div></div></div>
+</main>
+
+<footer class="sf"><div class="w"><div class="f4"><div><a href="#top" class="logo">The Saffron <i>Table</i></a><p class="ft">Modern Indian kitchen and family dining in Hyderabad.</p><p class="fcu">North Indian · South Indian · Chinese · Continental</p></div>
+<div><h3>Explore</h3><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#offers">Offers</a></div>
+<div><h3>Visit</h3><p>Banjara Hills (demo)<br>Gachibowli (demo)</p><a href="#outlets">Outlet timings</a></div>
+<div><h3>Contact</h3><a data-call href="#"></a><a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a><a href="#contact">Reserve a table</a></div></div>
+<small><a href="#top" style="float:right">Back to top</a>Demo website. Ratings, reviews, offers, addresses and contact details are illustrative.</small></div></footer>
+
+<nav class="sbar" aria-label="Quick actions"><a data-call href="#"><i data-ic="phone"></i>Call</a><a data-wa href="#" target="_blank" rel="noopener"><i data-ic="wa"></i>WhatsApp</a><a class="p" href="#contact"><i data-ic="cal"></i>Reserve</a></nav>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer"><button class="lb x" aria-label="Close photo viewer"><i data-ic="x"></i></button><button class="lb p" aria-label="Previous photo"><i data-ic="l"></i></button><figure class="lf" id="lf"></figure><button class="lb n" aria-label="Next photo"><i data-ic="r"></i></button></div>
+<div id="ts" role="status"></div>
+
+<!-- Saffron AI Floating Chat Assistant -->
+<button id="sc-toggle" class="sc-toggle" aria-label="Open Saffron AI assistant" aria-expanded="false" aria-controls="sc-modal">
+  <svg class="ic" aria-hidden="true"><use href="#i-bot"/></svg>
+  <span>Ask Saffron AI</span>
+  <span class="sc-toggle-badge" aria-hidden="true"></span>
+</button>
+
+<div id="sc-modal" class="sc-modal" role="dialog" aria-modal="true" aria-label="Saffron AI Assistant" aria-hidden="true">
+  <header class="sc-head">
+    <div class="sc-head-info">
+      <div class="sc-avatar" aria-hidden="true">
+        <svg class="ic" style="width:20px;height:20px;color:var(--chi)"><use href="#i-sparkle"/></svg>
+      </div>
+      <div>
+        <h2 class="sc-title">Saffron AI</h2>
+        <div class="sc-subtitle"><span class="sc-status-dot"></span><span>Culinary Concierge · Online</span></div>
+      </div>
+    </div>
+    <button id="sc-close" class="sc-close-btn" aria-label="Close chat window">
+      <svg class="ic" style="width:16px;height:16px"><use href="#i-x"/></svg>
+    </button>
+  </header>
+  
+  <div id="sc-messages" class="sc-messages" aria-live="polite"></div>
+
+  <div id="sc-prompts" class="sc-prompts" aria-label="Suggested prompts">
+    <button type="button" class="sc-prompt-chip" data-prompt="Recommend something for me.">Recommend something for me</button>
+    <button type="button" class="sc-prompt-chip" data-prompt="Show vegetarian dishes.">Show vegetarian dishes</button>
+    <button type="button" class="sc-prompt-chip" data-prompt="What are your bestsellers?">What are your bestsellers?</button>
+    <button type="button" class="sc-prompt-chip" data-prompt="What offers are available?">What offers are available?</button>
+    <button type="button" class="sc-prompt-chip" data-prompt="Where are your outlets?">Where are your outlets?</button>
+  </div>
+
+  <form id="sc-form" class="sc-footer" novalidate>
+    <div class="sc-input-wrapper">
+      <input id="sc-input" class="sc-input" type="text" placeholder="Ask about dishes, timings, offers..." aria-label="Type your message to Saffron AI" autocomplete="off" maxlength="1000">
+    </div>
+    <button id="sc-send" class="sc-send-btn" type="submit" aria-label="Send message">
+      <svg class="ic" style="width:18px;height:18px"><use href="#i-send"/></svg>
+    </button>
+  </form>
+</div>
+
+<script src="restaurant-data.js"></script>
+<script>
+const $=s=>document.querySelector(s),h=(s,e)=>(e||document).querySelectorAll(s);
+const ic=n=>`<svg class="ic" aria-hidden="true"><use href="#i-${n}"/></svg>`;
+h("[data-ic]").forEach(e=>e.outerHTML=ic(e.dataset.ic));
+/* Use single source of truth from restaurant-data.js */
+const { CONFIG, CATS, ALL, SIG, OFFERS, REV, FAQ } = window.RESTAURANT_DATA;
+
+/* Photos: embedded in the preview; on a real site they load from assets/images/<hero|gallery|menu>/<name>.webp. Missing files fall back to a placeholder. */
+const IMG=/*@@IMG@@*/{};
+const POS={"cold-coffee":"50% 62%","mango-lassi":"50% 64%","gulab-jamun":"50% 68%","hero-biryani":"50% 45%","steamed-rice":"50% 55%"};
+const slug=s=>s.toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function imgFail(i){const k=i.dataset.fb;if(IMG[k]&&i.src.indexOf("data:")!==0){i.src=IMG[k];return}const p=i.parentNode;p.classList.add("np");p.setAttribute("role","img");p.setAttribute("aria-label",i.alt+" (photo coming soon)");i.remove()}
+const media=(k,dir,alt,m,cls="",eager)=>`<div class="ph ${cls}" data-m="${m||alt[0]}"><img src="assets/images/${dir}/${k}.webp" data-fb="${k}" alt="${esc(alt)}" loading="${eager?"eager":"lazy"}" ${eager?'fetchpriority="high"':""} decoding="async" width="720" height="540" style="object-position:${POS[k]||"center"}" onerror="imgFail(this)"></div>`;
+const vm=d=>`<i class="vg${d.v?"":" nv"}" role="img" aria-label="${d.v?"Vegetarian":"Non-vegetarian"}"></i>`;
+$("#hi").outerHTML=media("hero-biryani","hero","Saffron basmati rice served on an ornate steel platter","Saffron","arch",1);
+$("#ai").outerHTML=media("food","gallery","Chutneys and condiments in steel bowls on a restaurant table","");
+$("#sig").innerHTML=SIG.map((n,i)=>{const d=ALL.find(x=>x.n===n);return `<figure class="${i?"":"f"}">${media(slug(n),"menu",d.n,d.n[0])}<figcaption><div class="cap"><h3>${vm(d)}${d.n}</h3><span class="pr">₹${d.p}</span></div><p class="ds">${d.d}</p>${d.t?`<span class="tag">${d.t}</span>`:""}</figcaption></figure>`}).join("");
+let cat="All";const tabs=$("#tabs");
+tabs.innerHTML=["All",...Object.keys(CATS)].map(c=>`<button aria-pressed="${c==="All"}">${c}</button>`).join("");
+const row=d=>`<article class="mi">${media(slug(d.n),"menu",d.n,d.n[0],"th")}<div><h3>${vm(d)}${d.n}</h3><p class="ds">${d.d}</p>${d.t?`<span class="tag">${d.t}</span>`:""}</div><span class="pr">₹${d.p}</span></article>`;
+function draw(){const q=$("#q").value.trim().toLowerCase(),vo=$("#vo").checked;
+const r=ALL.filter(d=>(cat==="All"||d.c===cat)&&(!vo||d.v)&&(d.n+" "+d.d).toLowerCase().includes(q));
+$("#cnt").textContent=r.length?`${r.length} dish${r.length>1?"es":""}${cat==="All"?"":" in "+cat}${vo?", vegetarian only":""}`:"";
+if(!r.length){$("#mg").innerHTML=`<div class="em"><p>No dishes match${q?" “"+esc($("#q").value.trim())+"”":""}${cat==="All"?"":" in "+cat}${vo?" with Veg only on":""}.</p><button class="btn" id="clr" type="button">Clear filters</button></div>`;return}
+$("#mg").innerHTML=cat==="All"?Object.keys(CATS).map(c=>{const x=r.filter(d=>d.c===c);return x.length?`<h3 class="ch">${c}</h3>`+x.map(row).join(""):""}).join(""):r.map(row).join("")}
+tabs.onclick=e=>{const b=e.target.closest("button");if(!b)return;cat=b.textContent;h("button",tabs).forEach(x=>x.setAttribute("aria-pressed",x===b));b.scrollIntoView({inline:"center",block:"nearest"});draw()};
+$("#q").oninput=draw;$("#vo").onchange=draw;draw();
+$("#mg").onclick=e=>{if(e.target.id!=="clr")return;cat="All";$("#q").value="";$("#vo").checked=false;h("button",tabs).forEach((x,i)=>x.setAttribute("aria-pressed",i===0));draw()};
+const GAL=[["food","gallery","Chutney and condiment tray at the table",""],["biryani","gallery","Chicken biryani, close up",""],["interior","gallery","Restaurant interior","Interior photo coming soon"],["brownie-with-ice-cream","menu","Warm brownie with vanilla ice cream",""],["family-seating","gallery","Family seating","Family seating photo coming soon"],["paneer-tikka","menu","Charred paneer tikka with salad",""],["party-space","gallery","Party and celebration space","Party space photo coming soon"],["gulab-jamun","menu","Gulab jamun served with ice cream",""]];
+const gm=(g,c)=>media(g[0],g[1],g[2]+(g[3]?" (photo coming soon)":""),g[3],(g[3]?"lbl ":"")+(c||""));
+$("#gl").innerHTML=GAL.map((g,i)=>`<div><button class="gb" data-i="${i}" aria-label="Open photo: ${g[2]}">${gm(g)}</button></div>`).join("");
+const lb=$("#lb");let li=0,last=null;
+const show=i=>{li=(i+GAL.length)%GAL.length;const g=GAL[li];$("#lf").innerHTML=`${gm(g,"lm")}<figcaption aria-live="polite">${g[2]} (${li+1}/${GAL.length})</figcaption>`};
+const closeLb=()=>{lb.classList.remove("o");document.body.style.overflow="";last&&last.focus()};
+$("#gl").onclick=e=>{const b=e.target.closest(".gb");if(!b)return;last=b;show(+b.dataset.i);lb.classList.add("o");document.body.style.overflow="hidden";lb.querySelector(".x").focus()};
+lb.onclick=e=>{const b=e.target.closest(".lb");if(e.target===lb||(b&&b.classList.contains("x")))closeLb();else if(b)show(li+(b.classList.contains("n")?1:-1))};
+document.addEventListener("keydown",e=>{if(!lb.classList.contains("o"))return;if(e.key==="Escape")closeLb();else if(e.key==="ArrowLeft")show(li-1);else if(e.key==="ArrowRight")show(li+1);else if(e.key==="Tab"){const b=[...h("button",lb)],i=b.indexOf(document.activeElement);e.preventDefault();b[(i+(e.shiftKey?-1:1)+b.length)%b.length].focus()}});
+let tx=0;lb.addEventListener("touchstart",e=>tx=e.touches[0].clientX,{passive:true});lb.addEventListener("touchend",e=>{const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)show(li+(dx<0?1:-1))});
+$("#of").innerHTML=OFFERS.map(([n,p,v,i])=>`<div class="of"><div><span class="dm">Demo offer</span><h3>${n}</h3></div><p class="ds" style="margin:0">${i.split(", ").join(" · ")}<br>Valid: ${v}</p><span class="pr">${typeof p==="number"?"₹"+p:p}</span><a class="btn" data-wa data-msg="Hi, I'd like to enquire about the ${n}" target="_blank" rel="noopener" href="#">${ic("wa")}Enquire on WhatsApp</a></div>`).join("");
+$("#rv").innerHTML=REV.map(([n,s,t,d],i)=>`<blockquote class="${i?"":"big"}"><div class="stars" role="img" aria-label="${s} out of 5 stars">${ic("star").repeat(s)}</div><p>${t}</p><span class="by">${n} · ${d} · Demo review</span></blockquote>`).join("");
+$("#fq").innerHTML=FAQ.map(([q,a])=>`<details><summary>${q}${ic("plus")}</summary><p>${a}</p></details>`).join("");
+$("#rg").innerHTML=Array.from({length:12},(_,i)=>`<option value="${i+1}">${i+1} guest${i?"s":""}</option>`).join("")+"<option>13+ (party)</option>";
+const today=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Kolkata"}).format(new Date());const fd=v=>new Date(v+"T00:00:00").toLocaleDateString("en-IN",{weekday:"short",day:"numeric",month:"short",year:"numeric"});$("#rd").min=$("#pd").min=today;
+const bg=$("#bg"),mn=$("#mn"),sm=o=>{mn.classList.toggle("o",o);bg.setAttribute("aria-expanded",o);bg.innerHTML=ic(o?"x":"menu")};
+bg.onclick=()=>sm(!mn.classList.contains("o"));mn.onclick=e=>{if(e.target.tagName==="A")sm(false)};
+const nl=[...h("nav.d a,#mn a")],io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)nl.forEach(a=>a.getAttribute("href")==="#"+e.target.id?a.setAttribute("aria-current","true"):a.removeAttribute("aria-current"))}),{rootMargin:"-40% 0px -55% 0px"});
+["about","menu","gallery","offers","party","outlets","contact"].forEach(i=>io.observe(document.getElementById(i)));
+addEventListener("scroll",()=>{if(scrollY<300)nl.forEach(a=>a.removeAttribute("aria-current"))},{passive:true});
+if(CONFIG.siteUrl){const l=document.createElement("link");l.rel="canonical";l.href=CONFIG.siteUrl;document.head.appendChild(l)}
+const waUrl=t=>`https://wa.me/${CONFIG.wa}?text=${encodeURIComponent(t)}`;
+const toast=m=>{const t=$("#ts");t.textContent=m;t.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(()=>t.style.display="none",4500)};
+const NC="Demo mode: no contact number is configured yet. Add it in CONFIG.";
+document.addEventListener("click",e=>{const a=e.target.closest("[data-call],[data-wa]");if(!a)return;
+if(a.hasAttribute("data-call")){if(!CONFIG.phone){e.preventDefault();toast(NC)}else a.href="tel:"+CONFIG.phone}
+else{if(!CONFIG.wa){e.preventDefault();toast(NC)}else a.href=waUrl(a.dataset.msg||"Hi, I'd like to know more about "+CONFIG.name)}});
+h("[data-call]").forEach(a=>{if(!CONFIG.phone)a.classList.add("nc");if(!a.children.length&&!a.textContent.trim())a.textContent=CONFIG.phone||"Call (not configured)"});
+h("[data-wa]").forEach(a=>{if(!CONFIG.wa)a.classList.add("nc")});
+const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const mins=t=>{const[a,b]=t.split(":");return +a*60+ +b};
+const fmt=m=>{m%=1440;const H=Math.floor(m/60),M=m%60;return(H%12||12)+(M?":"+String(M).padStart(2,"0"):"")+(H<12?" AM":" PM")};
+const ist=d=>{const p=Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Kolkata",weekday:"short",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(d).map(x=>[x.type,x.value]));return{day:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(p.weekday),n:+p.hour*60+ +p.minute}};
+function status(o,d=new Date()){const{day,n}=ist(d);
+if(o.off===day)return{on:false,txt:"Closed today (weekly off)",hrs:"Closed"};
+const op=mins(o.open),cl=mins(o.special[day]||o.close),end=cl===1440?"midnight":fmt(cl),hrs=fmt(op)+" – "+end;
+if(n>=op&&n<cl)return{on:true,txt:"Open now · closes "+(cl===1440?"at ":"")+end,hrs};
+return{on:false,txt:n<op?"Closed · opens "+fmt(op):"Closed for today",hrs}}
+
+$("#ol").innerHTML=CONFIG.outlets.map(o=>{
+  const q=encodeURIComponent(o.map);
+  const weeklyOffText=o.off===null?"None (Open 7 days)":DAYS[o.off]+" (Weekly Off)";
+  const specialTimingText=o.note||"Standard operating hours";
+  return `<article class="out" id="outlet-${o.id||slug(o.name)}">
+    <div class="out-meta-top">
+      <span class="dm" style="margin-bottom:0">Fictional Demo Outlet · Hyderabad</span>
+      <span class="bdg" data-b><span class="bdg-dot" aria-hidden="true" style="width:6px;height:6px;border-radius:50%;background:currentColor;display:inline-block"></span>Checking status...</span>
+    </div>
+    <header>
+      <h3>${o.name}</h3>
+    </header>
+    <p class="ad"><i data-ic="pin" style="width:16px;height:16px;vertical-align:-3px;margin-right:6px;color:var(--chi)"></i>${o.addr} <span class="fine">(Demo Location)</span></p>
+    <p class="st" data-t></p>
+    <dl>
+      <div><dt>Today's Hours</dt><dd data-h></dd></div>
+      <div><dt>Regular Hours</dt><dd>${fmt(mins(o.open))} – ${fmt(mins(o.close))}</dd></div>
+      <div><dt>Weekly Off</dt><dd>${weeklyOffText}</dd></div>
+      <div><dt>Special Timings</dt><dd>${specialTimingText}</dd></div>
+    </dl>
+    <div class="map" aria-label="Interactive map preview of ${o.map}">
+      <iframe loading="lazy" title="Google Map view of ${o.map} neighbourhood" src="https://www.google.com/maps?q=${q}&output=embed" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <div class="out-notice">
+      <strong>Demo Notice:</strong> Address is fictional for preview purposes. The map preview and directions button open the <strong>${o.map}</strong> neighbourhood search directly on Google Maps.
+    </div>
+    <div class="out-actions">
+      <a class="btn p" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${q}" aria-label="Get directions to ${o.name} neighbourhood on Google Maps">${ic("pin")}Get Directions</a>
+      <a class="btn" href="#contact" aria-label="Reserve a table at ${o.name}">${ic("cal")}Reserve Table</a>
+    </div>
+  </article>`;
+}).join("");
+const upd=()=>h(".out").forEach((c,i)=>{
+  const s=status(CONFIG.outlets[i]),b=c.querySelector("[data-b]");
+  b.innerHTML=`<span class="bdg-dot" aria-hidden="true" style="width:6px;height:6px;border-radius:50%;background:currentColor;display:inline-block"></span>${s.on?"Open now":"Closed"}`;
+  b.classList.toggle("on",s.on);
+  c.querySelector("[data-t]").textContent=s.txt;
+  c.querySelector("[data-h]").textContent=s.hrs;
+});
+upd();setInterval(upd,60000);
+function wire(id,fields,build){const f=$(id);f.addEventListener("input",e=>{const r=e.target.parentNode.querySelector(".er");if(r)r.textContent="";e.target.removeAttribute("aria-invalid")});f.onsubmit=e=>{e.preventDefault();let ok=true;
+h(".er",f).forEach(x=>x.textContent="");
+fields.forEach(([n,fn,msg])=>{const el=f.elements[n],er=el.parentNode.querySelector(".er");if(!fn(el.value.trim())){if(ok)el.focus();ok=false;if(er)er.textContent=msg;el.setAttribute("aria-invalid","true")}});
+if(!ok)return;const k=f.querySelector(".ok");k.hidden=false;
+if(!CONFIG.wa){k.innerHTML="<b>Demo mode:</b> no WhatsApp number is configured, so nothing was sent. This is the message that would open in WhatsApp:";const pre=document.createElement("pre");pre.textContent=build(f.elements);k.appendChild(pre);return}
+const w=window.open(waUrl(build(f.elements)),"_blank");if(w)w.opener=null;
+k.textContent=w?(id==="#rf"?"Your reservation request is ready. ":"Your enquiry is ready. ")+"Please send the WhatsApp message to contact the restaurant. The restaurant will confirm availability.":"Your browser blocked the WhatsApp window. Please allow pop-ups for this site and submit again."}}
+const req=v=>v.length>1,ph10=v=>{let s=v.replace(/[\s-]/g,"");if(/^\+91/.test(s))s=s.slice(3);else if(/^91\d{10}$/.test(s))s=s.slice(2);else if(/^0\d{10}$/.test(s))s=s.slice(1);return/^[6-9]\d{9}$/.test(s)},dt=v=>v&&v>=today,gn=v=>+v>=1;
+wire("#rf",[["n",req,"Enter your name"],["p",ph10,"Enter a valid 10-digit mobile number"],["d",dt,"Choose today or a future date"],["t",v=>v>="11:00"&&v<="22:30","Choose a time between 11:00 and 22:30"]],e=>`Hello ${CONFIG.name}, table reservation request:\nName: ${e.n.value}\nPhone: ${e.p.value}\nDate: ${fd(e.d.value)}\nTime: ${e.t.value}\nGuests: ${e.g.value}\nSeating: ${e.s.value}\nNotes: ${e.q.value||"-"}`);
+wire("#pf",[["n",req,"Enter your name"],["p",ph10,"Enter a valid 10-digit mobile number"],["d",dt,"Choose a future date"],["g",v=>+v>=5,"Enter guest count (5+)"]],e=>`Hello ${CONFIG.name}, event enquiry:\nEvent: ${e.e.value}\nName: ${e.n.value}\nPhone: ${e.p.value}\nDate: ${fd(e.d.value)}\nGuests: ${e.g.value}\nTime: ${e.t.value}\nRequirements: ${e.s.value||"-"}`);
+
+h(".er").forEach(x=>x.setAttribute("aria-live","polite"));
+
+// Lightweight Markdown parser for Saffron AI assistant responses
+function formatMarkdown(text) {
+  if (!text) return "";
+  let esc = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  // Bold and italic
+  esc = esc.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  esc = esc.replace(/\*(.*?)\*/g, "<em>$1</em>");
+  // Internal anchor links (hash fragment references)
+  esc = esc.replace(/(#(?:contact|menu|outlets|party|gallery|offers|about))/gi, '<a href="$1">$1</a>');
+  const lines = esc.split("\n");
+  let html = "", inList = false;
+  for (let line of lines) {
+    const trimmed = line.trim();
+    // Headings: ####, ###, ##, #
+    if (/^#{1,4}\s+/.test(trimmed)) {
+      if (inList) { html += "</ul>"; inList = false; }
+      const level = trimmed.match(/^(#{1,4})/)[1].length;
+      const headingText = trimmed.replace(/^#{1,4}\s+/, "");
+      // Map #### -> h4 but render all as a styled paragraph inside chat
+      const tag = level <= 2 ? "h4" : "h5";
+      html += `<${tag} class="sc-md-h">${headingText}</${tag}>`;
+    // Horizontal rule
+    } else if (trimmed === "---" || trimmed === "***" || trimmed === "___") {
+      if (inList) { html += "</ul>"; inList = false; }
+      html += "<hr class=\"sc-md-hr\">";
+    // Bullet list items
+    } else if (trimmed.startsWith("- ") || trimmed.startsWith("• ") || trimmed.startsWith("* ")) {
+      if (!inList) { html += "<ul>"; inList = true; }
+      html += `<li>${trimmed.substring(2)}</li>`;
+    } else {
+      if (inList) { html += "</ul>"; inList = false; }
+      if (trimmed.length > 0) {
+        html += `<p>${trimmed}</p>`;
+      }
+    }
+  }
+  if (inList) html += "</ul>";
+  return html;
+}
+
+// Saffron AI Chat Assistant Controller
+(function initSaffronAI() {
+  const BACKEND_URL = window.SAFFRON_BACKEND_URL || "http://localhost:5000";
+  const toggleBtn = $("#sc-toggle");
+  const modal = $("#sc-modal");
+  const closeBtn = $("#sc-close");
+  const messagesEl = $("#sc-messages");
+  const formEl = $("#sc-form");
+  const inputEl = $("#sc-input");
+  const promptsEl = $("#sc-prompts");
+  const sendBtn = $("#sc-send");
+
+  if (!toggleBtn || !modal) return;
+
+  let isOpen = false;
+  let isSending = false;
+  const chatHistory = [];
+
+  function getTimeStr() {
+    return new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  }
+
+  function renderMessage(role, text, isError = false) {
+    const msgDiv = document.createElement("div");
+    msgDiv.className = `sc-msg ${role === "user" ? "user" : "bot"}${isError ? " sc-error" : ""}`;
+    
+    const bubble = document.createElement("div");
+    bubble.className = "sc-bubble";
+    if (role === "user") {
+      bubble.textContent = text;
+    } else {
+      bubble.innerHTML = formatMarkdown(text);
+    }
+    
+    const timeSpan = document.createElement("span");
+    timeSpan.className = "sc-time";
+    timeSpan.textContent = getTimeStr();
+    
+    msgDiv.appendChild(bubble);
+    msgDiv.appendChild(timeSpan);
+    messagesEl.appendChild(msgDiv);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function showTyping() {
+    const typingDiv = document.createElement("div");
+    typingDiv.id = "sc-typing-indicator";
+    typingDiv.className = "sc-msg bot";
+    typingDiv.innerHTML = `
+      <div class="sc-typing" aria-label="Saffron AI is thinking">
+        <span>Saffron AI</span>
+        <div class="sc-dot"></div>
+        <div class="sc-dot"></div>
+        <div class="sc-dot"></div>
+      </div>
+    `;
+    messagesEl.appendChild(typingDiv);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function hideTyping() {
+    const el = document.getElementById("sc-typing-indicator");
+    if (el) el.remove();
+  }
+
+  function openChat() {
+    isOpen = true;
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    toggleBtn.setAttribute("aria-expanded", "true");
+    inputEl.focus();
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function closeChat() {
+    isOpen = false;
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    toggleBtn.setAttribute("aria-expanded", "false");
+    toggleBtn.focus();
+  }
+
+  toggleBtn.onclick = () => {
+    if (isOpen) closeChat();
+    else openChat();
+  };
+
+  closeBtn.onclick = closeChat;
+
+  document.addEventListener("keydown", e => {
+    if (isOpen && e.key === "Escape") {
+      closeChat();
+    }
+  });
+
+  async function sendMessage(text) {
+    const trimmed = text.trim();
+    if (!trimmed || isSending) return;
+
+    // Snapshot existing conversation history BEFORE adding this latest message.
+    // This ensures `trimmed` is passed ONLY ONCE: separately as `message`, NOT inside `history`.
+    const historyPayload = chatHistory.slice(-8);
+
+    // Render user message to UI
+    renderMessage("user", trimmed);
+    inputEl.value = "";
+    isSending = true;
+    sendBtn.disabled = true;
+    showTyping();
+
+    try {
+      const response = await fetch(`${BACKEND_URL}/api/chat`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message: trimmed,
+          history: historyPayload
+        })
+      });
+
+      hideTyping();
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        const errorMsg = data.error || `Server error (${response.status})`;
+        // Render error message to UI, but DO NOT record it in genuine chatHistory
+        renderMessage("assistant", `I apologize: ${errorMsg}`, true);
+      } else if (data.reply) {
+        // Genuine assistant reply: record user prompt and assistant reply in chatHistory
+        chatHistory.push({ role: "user", content: trimmed });
+        chatHistory.push({ role: "assistant", content: data.reply });
+        renderMessage("assistant", data.reply);
+      } else {
+        const fallbackMsg = "I received an empty response. How else may I assist you with our dishes or outlets?";
+        chatHistory.push({ role: "user", content: trimmed });
+        chatHistory.push({ role: "assistant", content: fallbackMsg });
+        renderMessage("assistant", fallbackMsg);
+      }
+    } catch (err) {
+      hideTyping();
+      console.warn("[Saffron AI Error]:", err);
+      // Network/server failure: render in UI, do NOT record in genuine chatHistory
+      renderMessage("assistant", "I'm having trouble connecting to my kitchen brain server right now. If running locally, please ensure the backend is started (`npm start` inside the `backend` folder) and your `GROQ_API_KEY` is configured in `backend/.env`.", true);
+    } finally {
+      isSending = false;
+      sendBtn.disabled = false;
+      inputEl.focus();
+    }
+  }
+
+  formEl.onsubmit = e => {
+    e.preventDefault();
+    sendMessage(inputEl.value);
+  };
+
+  promptsEl.onclick = e => {
+    const chip = e.target.closest(".sc-prompt-chip");
+    if (!chip) return;
+    sendMessage(chip.dataset.prompt);
+  };
+
+  // Welcome message with suggested guidance
+  const welcomeText = "Namaste! 🙏 Welcome to The Saffron Table. I'm **Saffron AI**, your personal dining assistant.\n\nI can recommend dishes, show vegetarian or bestseller favourites, explain our special meal offers, check outlet timings in Hyderabad, or help prepare your table reservation.\n\nHow may I assist you today?";
+  renderMessage("assistant", welcomeText);
+  chatHistory.push({ role: "assistant", content: welcomeText });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "saffron-table-backend",
+  "version": "1.0.0",
+  "description": "Backend API for The Saffron Table AI Assistant (Saffron AI)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "saffron-table",
+    "express",
+    "groq",
+    "ai-assistant"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "groq-sdk": "^0.15.0"
+  }
+}
